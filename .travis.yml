@@ -3,7 +3,6 @@ language: node_js
 node_js:
   - 6.0.0
 
-# install terraform
 install:
   - curl -fSL "https://releases.hashicorp.com/terraform/0.11.0/terraform_0.11.0_linux_amd64.zip" -o terraform.zip
   - sudo unzip terraform.zip -d /opt/terraform
@@ -11,4 +10,4 @@ install:
   - rm -f terraform.zip
 
 after_success:
-  terraform plan
+  - terraform plan
